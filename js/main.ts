@@ -15,7 +15,7 @@ import {
 async function createAndInitOpenOrder(){
     let createAccount=new Account()
     let openOrder=new Account();
-    let programId=new PublicKey("BZMn9wczraZbwBErg2A7HXexE4qLi1syRH2SQ2jjHQoB");
+    let programId=new PublicKey("3WzGCAhJFJ5x1Ys6yQXg7gSHxjaoysEQVG11rxcH9voP");
     let connection=new Connection("http://127.0.0.1:8899")
     console.log("openOrderopenOrderopenOrder ",openOrder.publicKey.toBase58())
     let [programAddress, nonce] = await PublicKey.findProgramAddress(
@@ -36,7 +36,6 @@ async function createAndInitOpenOrder(){
         {pubkey: SystemProgram.programId, isSigner: false, isWritable: false},
         {pubkey: createAccount.publicKey, isSigner: false, isWritable: false},
         {pubkey:rent, isSigner: false, isWritable: false},
-        {pubkey:swap_serum_program_id, isSigner: false, isWritable: false},
         {pubkey:dex_program_id, isSigner: false, isWritable: false},
       ],
       programId,

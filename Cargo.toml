@@ -11,8 +11,7 @@ no-entrypoint = []
 borsh = "0.9.3"
 borsh-derive = "0.9.1"
 solana-program = "~1.8.14"
-NT-serum-swap = { version ="0.4.4" ,features = ["cpi"] } #localnet
-
+serum_dex = {version="0.5.4",features = [ "no-entrypoint" ] }
 [dev-dependencies]
 solana-program-test = "~1.8.14"
 solana-sdk = "~1.8.14"
